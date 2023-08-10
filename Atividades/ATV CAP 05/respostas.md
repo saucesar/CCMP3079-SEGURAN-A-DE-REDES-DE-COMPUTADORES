@@ -38,7 +38,7 @@ Algoritmo de expansão de chave: Este algoritmo expande a chave mestra do AES em
 
 5. **Quantos bytes em Estado são afetados por ShiftRows?**
 
-Na etapa ShiftRows do AES, todos os 16 bytes no array Estado são afetados. A operação de deslocamento circular é aplicada às linhas do array Estado da seguinte maneira:
+Na etapa ShiftRows do AES, 12 bytes no array Estado são afetados. A operação de deslocamento circular é aplicada às linhas do array Estado da seguinte maneira:
 
 A primeira linha não sofre nenhum deslocamento.
 A segunda linha é deslocada uma posição para a esquerda.
