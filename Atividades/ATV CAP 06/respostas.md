@@ -80,8 +80,8 @@ def split_half(input):
     return input[:mid], input[mid:]
 
 def sbox_lookup(input, sbox):
-    row = int(input[0] + input[3], 2)
-    col = int(input[1] + input[2], 2)
+    row = int(input[0] + input[3])
+    col = int(input[1] + input[2])
     return format(sbox[row][col], '02b')
 
 # Funções S-DES
@@ -156,7 +156,7 @@ def cbc_decrypt(ciphertext, key, iv):
     for encrypted_block in ciphertext:
         decrypted_block = decrypt_block(encrypted_block, subkey1, subkey2)
         decrypted_block = xor(decrypted_block, previous_block)
-        plaintext.append(dec
+        plaintext.append(decrypted_block)
 
 
 # Substituição e permutação S-DES (como mencionado anteriormente)
